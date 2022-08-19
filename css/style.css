@@ -1,0 +1,1421 @@
+@charset "utf-8";
+
+:root {
+    --bg-color: #000;
+    --main-color: #000;
+    --font-color: #fff;
+    --big-box-color: rgb(24, 24, 23);
+    --small-box-color: #fff;
+    --large-width: 1200px;
+    /*        최대크기 1000px로 설정*/
+    --En-font-faimily: "Chakra Petch", sans-serif;
+    --Kr-font-faimily: "arial";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Chakra Petch", sans-serif, "arial";
+}
+
+
+/*599px이하 미디어(스마트폰)로 접속할 경우 기본 설정 : 폰트 크기*/
+@media screen and (max-width:599px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+/*600px이상 800px이하 미디어(테블릿)로 접속할 경우 기본 설정 : 폰트 크기*/
+@media screen and (min-width:600px) and (max-width:799px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+/*800px이상 미디어(PC)로 접속할 경우 기본 설정 : 폰트 크기*/
+@media screen and (min-width:800px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "arial";
+    font-size: 16px;
+    background-color: #000;
+    background-color: var(--bg-color);
+    -ms-overflow-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    max-width: var(--large-width);
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+/*타이틀*/
+.txt h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.txt p {
+    opacity: 0.8;
+}
+
+@media screen and (min-width:600px) and (max-width:799px) {
+    .txt h1 {
+        font-size: 28px
+    }
+}
+
+@media screen and (min-width:800px) {
+    .txt h1 {
+        font-size: 28px
+    }
+}
+
+/*=========헤더영역=========*/
+
+header {
+    width: 100%;
+    font-family: "Chakra Petch", sans-serif;
+    font-family: var(--En-font-faimily);
+}
+
+/*---header_01영역*/
+.header_01 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 25px 10px 25px;
+}
+
+/*로고*/
+.main_logo {
+    display: inline-block;
+}
+
+.main_logo img {
+    width: 8.8rem;
+}
+
+/*회원가입*/
+.sign_in {
+    display: inline-block;
+    float: right;
+}
+
+.sign_in:hover {
+    opacity: 0.8;
+}
+
+/*---header_02영역*/
+/*상단고정메뉴*/
+.header_02 {
+    width: 100%;
+    z-index: 100;
+    text-align: left;
+    background-color: #000;
+}
+
+.header_02 nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header_02 ul {
+    padding: 0 15px;
+}
+
+.header_02 li {
+    display: inline;
+    width: 100px;
+}
+
+.header_02 li a {
+    padding: 15px 10px 15px 10px;
+    border-bottom: 2px solid #000;
+}
+
+.header_02 li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+.header_02 li:hover a {
+    opacity: 0.8;
+}
+
+/*헤더 메뉴_고정 클래스*/
+.menu-fixed {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    text-align: left;
+}
+
+@media screen and (max-width:769px) {
+    .header_02 {
+        min-width: 447px;
+        -ms-overflow-style: none;
+        overflow-x: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .header_02::-webkit-scrollbar {
+        display: none;
+    }
+
+    .header_02 li {
+        display: inline;
+    }
+
+    .header_02 li a {
+        font-size: 2.55vw;
+    }
+
+    .menu-fixed {
+        position: fixed;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:799px) {
+    .header_02 li {
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .header_02 li {
+        margin-right: 2.4rem;
+    }
+}
+
+/*=========콘텐츠 영역=========*/
+contents {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    color: #fff;
+    color: var(--font-color);
+}
+
+/*---con_01영역*/
+.con_01 {
+    width: 100%;
+    max-width: 1200px;
+    height: 650px;
+    font-size: 100%;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.con_01:hover {
+    opacity: 0.8;
+}
+
+/*이미지*/
+.con_01 img {
+    width: 100%;
+    float: left;
+}
+
+.con_01 .text {
+    width: 100%;
+    position: absolute;
+}
+
+.con_01 .text .top {
+    width: 100%
+}
+
+.con01_txt {
+    margin-top: 2rem;
+    width: calc(33.3% - 0.4rem);
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.bottom {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.bottom h3 {
+    font-size: 1.2rem;
+}
+
+.bottom h1 {
+    margin-top: 0.8rem;
+    font-size: 4rem;
+}
+
+.bottom p {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:599px) {
+    .con_01 {
+        margin-bottom: 100px;
+        height: 450px;
+    }
+
+    .con_01 img {
+        width: 100%;
+        height: 100%;
+        min-height: 80vw;
+        float: left;
+        object-fit: fill;
+    }
+
+    .con01_txt {
+        font-size: 1.8rem;
+    }
+
+    .bottom h3 {
+        font-size: 4vw;
+    }
+
+    .bottom h1 {
+        font-size: 12vw;
+    }
+
+    .bottom p {
+        font-size: 5vw;
+    }
+}
+
+/*막대*/
+
+/*---con_02영역*/
+
+.con_02 {
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+
+.con_02 .txt {
+    margin-bottom: 50px;
+}
+
+/*카테고리 패스 가격 시작*/
+.price {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.price .box {
+    width: 32%;
+    height: 378px;
+    display: inline;
+    float: left;
+    background-color: rgb(24, 24, 23);
+    background-color: var(--big-box-color);
+    position: relative;
+}
+
+.price .box:nth-child(2) {
+    margin: 0 2%;
+}
+
+.price .box:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.price .bg1 {
+    width: 100%;
+    height: inherit;
+    background-image: url(../images/bg_sector_card_music.81a4c99d.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.price .bg2 {
+    width: 100%;
+    height: inherit;
+    background-image: url(../images/bg_sector_card_film.924cc5a4.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.price .bg3 {
+    width: 100%;
+    height: inherit;
+    background-image: url(../images/bg_sector_card_art.2ad2872d.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/*아이콘*/
+.box .icon {
+    margin-top: 50px;
+}
+
+.box .icon h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*중간 글(할인가격)*/
+.box .middle_txt {
+    margin-top: 35px;
+}
+
+.box .middle_txt small {
+    color: #888;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-decoration: line-through;
+}
+
+.box .middle_txt h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.box .middle_txt span {
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: bolder;
+    padding: 3px 5px;
+    background-color: #fff;
+    background-color: var(--small-box-color);
+}
+
+/*더보기*/
+.box .more {
+    margin-top: 100px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:599px) {
+    .con_02 .txt {
+        margin-bottom: 30px;
+    }
+
+    .price .box {
+        height: 210px;
+    }
+
+    .box .icon {
+        margin-top: 15px;
+    }
+
+    .box .middle_txt {
+        margin-top: 15px;
+    }
+
+    /*더보기*/
+    .box .more {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+}
+
+/*숫자(아티스트/아트클래스/오픈예정)*/
+.con_02 .countbox {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.countbox .count {
+    display: inline;
+    width: 33.33%;
+    float: left;
+    color: #ff4000;
+    font-weight: bold;
+    text-align: center;
+    padding: 100px 10px 50px 20px;
+}
+
+.number span {
+    font-size: 2.2rem;
+}
+
+.nymber i {
+    font-size: 1rem;
+}
+
+.number span::after i {
+    float: left;
+    padding-bottom: 30px;
+}
+
+.count .txt p {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    padding: 10px 0;
+}
+
+@media screen and (max-width:599px) {
+    .con_02 .countbox {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .countbox .count {
+        padding: 50px 10px 25px 20px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:799px) {
+    .con_02 .countbox {
+        width: 80%;
+        margin: 0 auto;
+        padding: 100px 10px 100px 20px;
+    }
+
+    .number i {
+        margin-right: 30px;
+    }
+}
+
+/*---con_03 / con_04 / con_05 / con_06 영역*/
+.same {
+    clear: both;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.same .txt {
+    margin-bottom: 80px;
+}
+
+.same .wrap {
+    float: left;
+    width: calc(25% - 1.13rem);
+    display: inline-block;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.same .wrap:nth-of-type(5),
+.same .wrap:nth-of-type(9),
+.same .wrap:nth-of-type(11) {
+    margin: 0;
+}
+
+.same .wrap:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.lesson {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    max-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.same .wrap span {
+    color: #000;
+    background-color: #fff;
+    background-color: var(--small-box-color);
+}
+
+/*con_02만 해당영역*/
+.upcoming {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.88rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Chakra Petch", sans-serif;
+    font-family: var(--En-font-faimily);
+}
+
+.open_notice {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.88rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 30%;
+    font-weight: bold;
+    font-family: "arial";
+    font-family: var(--Kr-font-faimily);
+}
+
+/*con_02만 해당영역 끝*/
+
+.lessen_information {
+    padding: 10px 0;
+}
+
+.lessen_information p {
+    font-size: 0.6rem;
+    opacity: 0.8;
+    font-weight: bold;
+    font-family: "Chakra Petch", sans-serif;
+    font-family: var(--En-font-faimily);
+}
+
+.lessen_information p:nth-child(2) {
+    padding-bottom: 5px;
+}
+
+.lessen_information h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "arial";
+    font-family: var(--Kr-font-faimily);
+}
+
+.btn {
+    display: none;
+}
+
+@media screen and (max-width:769px) {
+    .same {
+        padding: 50px 0;
+    }
+
+    .same .wrap {
+        width: calc(50% - 2rem);
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .same .wrap:nth-of-type(3),
+    .same .wrap:nth-of-type(7) {
+        margin: 0;
+    }
+
+    .same .txt {
+        margin-bottom: 30px;
+    }
+
+    .lessen_information p {
+        font-size: 0.8rem;
+        opacity: 0.8;
+    }
+
+    /*모바일일때 더보기/ 숨기기 버튼*/
+    .same .wrap:nth-of-type(n+6) {
+        display: none;
+    }
+
+    .btn {
+        clear: both;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .more_btn p,
+    .hide_btn p {
+        color: #fff;
+        padding: 20px;
+    }
+
+    .more_btn p:hover,
+    .hide_btn p:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .hide_btn {
+        display: none;
+    }
+
+    .btn i {
+        margin-right: 20px;
+    }
+}
+
+/*con_06만 해당영역 시작*/
+.con_06 {
+    overflow: hidden;
+    height: 1039px;
+}
+
+.same .review {
+    display: inline-block;
+    float: left;
+    width: calc(33.3% - 1.63rem);
+    height: 400px;
+    background-color: rgb(24, 24, 23);
+    background-color: var(--big-box-color);
+    padding: 1.5rem 1.94rem;
+    line-height: 1;
+    margin: 2rem 2.44rem 0px 0px;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.review:nth-child(3n+1) {
+    margin-right: 0;
+}
+
+.review .rtxt {
+    color: #fff;
+    color: var(--font-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1;
+    line-height: 1.5;
+}
+
+.artistname {
+    margin-bottom: 10px;
+}
+
+.info .nickname {
+    position: absolute;
+    bottom: 25px;
+    font-weight: bold;
+}
+
+.info .dates {
+    position: absolute;
+    bottom: 25px;
+    right: 40px;
+}
+
+.review .rtxt span,
+.review p small {
+    display: inline-block;
+    font-size: small;
+    font-weight: bold;
+    color: #888;
+}
+
+.con_06 div:nth-child(26) {
+    margin-bottom: 10rem;
+}
+
+.btn02 {
+    clear: both;
+    width: 100%;
+    padding: 1rem;
+    line-height: 50px;
+
+}
+
+#review_mbtn p,
+#review_hbtn p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#review_mbtn p:hover,
+#review_hbtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#review_mbtn {
+    display: block;
+    text-align: center;
+}
+
+#review_hbtn {
+    display: none;
+    text-align: center;
+}
+
+@media screen and (max-width:769px) {
+    .con_06 {
+        height: 1117px;
+    }
+
+    .same .review {
+        width: calc(100% - 3rem);
+        height: 300px;
+        margin: 1.5rem;
+    }
+
+    .review .rtxt {
+        color: #fff;
+        color: var(--font-color);
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1;
+        line-height: 2;
+    }
+
+}
+
+/*con_06만 해당영역 끝*/
+
+
+
+/*---con_07 (kakao 채널 추가)영역*/
+.con_07 {
+    clear: both;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    background-color: rgb(24, 24, 23);
+    background-color: var(--big-box-color);
+}
+
+.kakao img {
+    margin-bottom: 0.8rem;
+}
+
+.kakao {
+    margin: 0 auto;
+    padding: 3.8rem;
+    line-height: 1.5;
+}
+
+.kakao_box {
+    display: inline-block;
+    background-color: #fff;
+    margin-top: 1.5rem;
+    color: #000;
+    padding: 1rem 3rem;
+}
+
+.kakao_box:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.kakao p {
+    font-size: 0.8rem;
+}
+
+.kakao_box p {
+    font-weight: bold;
+}
+
+@media screen and (max-width:599px) {
+    .con_07 {
+        height: 250px;
+    }
+
+    .kakao {
+        padding: 2rem;
+    }
+
+    .kakao img {
+        margin-bottom: 0.4rem;
+    }
+
+    .kakao_box {
+        padding: 1rem 2rem;
+        margin-top: 0.8rem;
+    }
+
+    .kakao p {
+        font-size: 1rem;
+    }
+}
+
+/*---con_08 수강신청영역 시작*/
+.con_08 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 120px;
+    clear: both;
+    background-color: #000;
+    text-align: center;
+    z-index: 100;
+}
+
+.resister {
+    width: 100%;
+    max-width: 1200px;
+    height: 120px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.resister > div {
+    display: inline-block;
+}
+
+.passtxt {
+    float: left;
+    text-align: left;
+}
+
+.passtxt h1 {
+    font-size: 1.2rem;
+}
+
+.passtxt p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.passbtn {
+    float: right;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+}
+
+.passbtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width:769px) {
+    .resister h1 {
+        display: none;
+    }
+
+    .passtxt {
+        width: 100%;
+    }
+
+    .passtxt p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .passbtn {
+        width: 100%;
+    }
+}
+
+/*---con_08 수강신청영역 끝*/
+
+
+/*---footer 영역*/
+/*왼쪽*/
+footer {
+    z-index: 10000;
+    background-color: #000;
+    clear: both;
+    width: 100%;
+    height: 350px;
+    color: #fff;
+}
+
+footer > div {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    padding: 3rem 2rem 0 2rem;
+    opacity: 0.9;
+}
+
+.foot_menu li {
+    margin-top: 0.8rem;
+    display: inline-block;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+.foot_menu li:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.company {
+    margin-top: 1.5rem;
+    opacity: 0.5;
+}
+
+.companyName {
+    font-size: 0.8rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.campanyInfo {
+    font-size: 0.5rem;
+    letter-spacing: 0.8;
+    line-height: 1.5;
+}
+
+/*오른쪽*/
+.sns {
+    opacity: 0.9;
+    font-size: 0.8rem;
+}
+
+.sns img {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+}
+
+.sns img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+select {
+    background: url(../images/footer_language.1186d53b.svg) 15% center no-repeat;
+    margin-top: 3rem;
+    width: 150px;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    font-size: 0.8rem;
+    border: 1px solid #999;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+    footer > div {
+        width: 100%;
+    }
+}
+
+.copyright {
+    clear: both;
+    width: 100%;
+    font-size: 0.5rem;
+    letter-spacing: 0.8;
+    line-height: 1.5;
+    opacity: 0.5;
+    padding-bottom: 4rem;
+}
+
+/*!!!!!!!!---회원가입 페이지*/
+
+.sign_login {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.box2 {
+    width: 400px;
+    margin: 60px auto 50px auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.box2 h1 {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.login a {
+    text-align: left;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #222;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:nth-last-of-type(1) {
+    margin-bottom: 2.5rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.sign p {
+    color: #fff;
+    float: left;
+    margin-left: .5rem;
+}
+
+.sign img {
+    float: left;
+    margin-left: 5rem;
+}
+
+.login a {
+    font-size: 0.7rem;
+    margin: 0.5rem 0.3rem 2rem 0.3rem;
+}
+
+.login a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.login span {
+    color: #fff;
+}
+
+.ID {
+    width: 100%;
+    height: 50px;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.ID:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.kakao_ p {
+    color: #555;
+}
+
+.google_ p {
+    color: #000;
+}
+
+.Email_ p {
+    float: none;
+}
+
+.Terms_of_service {
+    width: 100%;
+    height: 80px;
+    margin: 30px auto 0 auto;
+    font-size: 0.55rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Terms_of_service a {
+    text-decoration: underline;
+}
+
+.Terms_of_service a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+    .ID p {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .sign img {
+        margin-left: 6.5rem;
+    }
+
+    .login a {
+        font-size: 1rem;
+        margin: 1rem 0.3rem 2rem 0.3rem;
+    }
+
+    #tos {
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+        margin: 0 auto;
+    }
+}
+
+/*!!!!!!!!---artclass_music페이지*/
+/*sub_menu영역*/
+.sub_menu {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.sub_menu > div {
+    display: inline-block;
+    width: 31.33%;
+    float: left;
+    text-align: center;
+    background-color: #111;
+    margin: 1rem 1%;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.sub_menu > div:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#border {
+    border: 1px solid #fff;
+}
+
+
+/*배너 영역*/
+.sub_banner {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box3 {
+    width: 100%;
+}
+
+.box3 img {
+    width: 100%;
+    max-width: 1200px;
+    object-fit: cover;
+}
+
+.sub_text {
+    position: absolute;
+    top: 30%;
+    left: 50px;
+}
+
+.sub_text h1 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.passbtn2 {
+    float: right;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    margin-top: 30px;
+    left: 50px;
+    top: 65%;
+}
+
+.passbtn2:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width:769px) {
+    .box3 img {
+        width: 100%;
+        height: 500px;
+        object-position: right top;
+    }
+
+    .sub_text {
+        position: absolute;
+        top: 330px;
+        left: 20px;
+    }
+
+    .sub_text img {
+        height: 50px;
+    }
+
+    .passbtn2 {
+        position: relative;
+        left: 0;
+        float: left;
+        margin-left: 2rem;
+    }
+
+
+}
+
+/*수강가격영역*/
+.promotion {
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 310px;
+    padding: 3rem;
+    border: 1px solid #555;
+    font-weight: bold;
+}
+
+.promotion h1 {
+    font-size: 1.3rem;
+    margin-bottom: 3%;
+}
+
+.promotion hr {
+    border: 1px solid #555;
+}
+
+.promotion p {
+    padding: 20px 0;
+}
+
+.promotion span {
+    font-size: 1.2rem;
+}
+
+.box4 {
+    width: 47%;
+    float: left;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+.line {
+    display: none;
+}
+
+.box4 span,
+.box5 span {
+    float: right;
+    text-align: right;
+
+}
+
+.box5 {
+    width: 47%;
+    float: right;
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.box5 small {
+    color: #888;
+    font-weight: bold;
+}
+
+.box5 strong {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:769px) {
+    .promotion {
+        width: 100%;
+        max-width: 700px;
+        height: 420px;
+    }
+
+    .promotion h1 {
+        font-size: 1.7rem;
+    }
+
+    .line {
+        display: block;
+    }
+
+
+    .box4,
+    .box5 {
+        width: 100%;
+    }
+}
+
+/*musicClass영역*/
+.musicClass {
+    width: 100%;
+    max-width: 716px;
+    margin: 0 auto 5rem auto;
+}
+
+.musicClass h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.musicClass p {
+    color: #888;
+    font-weight: bold;
+}
+
+.musicClass img {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width:769px) {
+    .musicClass {
+        padding: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .musicClass h1 {
+        font-size: 1.7rem;
+    }
+
+    .musicClass p {
+        font-size: 1rem;
+    }
+
+    .musicClass img {
+        object-fit: contain;
+        max-width: 700px;
+    }
+
+    .secret h1,
+    .about h1,
+    .rapflow h1,
+    .mix h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/*글단락 추가*/
+.add {
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+/*선물하기영역*/
+.Gift_box {
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #fff;
+    margin-top: 2rem;
+    color: #fff;
+    padding: 0.7rem 2rem;
+}
+
+.Gift_box:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
